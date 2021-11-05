@@ -33,13 +33,13 @@ Therefore, we will try to confirm this hypothesis and underlines some keys predi
 #### Research Questions:
 A list of research questions you would like to address during the project. --> link to papers
 
-    - Does the politic orientation affects the use of informal language ?
+    - Can the use of informal language provide information about political orientation (via wikidata) ?
 
-    - Does the occupation place has an influence on using the colloquial language ?
+    - Does the professional occupation has an influence on the use the colloquial language (via wikidata) ?
 
-    - Does the standrd metric (age, gender, nationality) has any influence on the studied topic ?
+    - Do the standard metrics (age, gender, nationality) have any influence on the studied topic (via wikidata) ?
 
-    - Do some paper favorize the presence of informal langage or try to limit it ?
+    - Do some newspapers favorize the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the data sources (via WHOIS requests) ?
     
 #### Proposed additional datasets:
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
