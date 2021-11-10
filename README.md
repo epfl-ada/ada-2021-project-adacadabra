@@ -27,25 +27,30 @@ The idea for this project was born out of a general observation by a member of t
 Given this intuition, the informal language appears an interesting subject to focus on, and the next step was to study how to easily detect the use of colloquial language. Thanks to research and discussions with a graduate student in English literature, it appears that the usage of informal language is mainly linked to the usage of a specific vocabulary. [reference ?] Therefore, the large number of quotations containing in the Quotebank dataset seems to offer a great opportunity to obtain a general overview on these aspects
         
 #### Story : 
-1. present quotebank : geographical representation, standard stastitics.
-2. Results on informal language classification : method and index used, graphical repartition (PCA, clustering)...
-3. Statistical analysis : depending on the results, focus on an interesting relation with metadata
+| Step | idea | Description  |
+|:---------|:-----------|:-----------|
+1. | Presentation of Quotebank | geographical representation, standard stastitics with fancy representation to present the dataset to the visitor of the page |
+2. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (Zipf law ?) |
+3. | Exploratory analyisis |explore the relation between the metadata and the classification of the quotes |
+4. | Identify the key correlation | Linear regression with coefficient which could have an influence on the output (informal/formal) | 
+5. | Explanatory study | choose a relation and investigate in depth how is it possible (or not) to explain it |
+6. | Conclusion | Highlight the fact that correlation $\noteq$ to causation, limits on your study |
     
 #### Research Questions:
 A list of research questions you would like to address during the project. --> link to papers
 
-    - Can the use of informal language provide information about political orientation (via wikidata) ?
+ - Can the use of informal language provide information about political orientation (via wikidata) ?
 
-    - Does the professional occupation /political party has an influence on the use the colloquial language (via wikidata) ?
+ - Does the professional occupation /political party has an influence on the use the colloquial language (via wikidata) ?
 
-    - Do the standard metrics (age, gender, nationality) have any influence on the studied topic (via wikidata) ?
+ - Do the standard metrics (age, gender, nationality) have any influence on the studied topic (via wikidata) ?
 
-    - Do some newspapers favorize the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the data sources (via WHOIS requests) ? --> à reformuler
+ - Do some newspapers favorize the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the  data sources (via WHOIS requests) ? --> à reformuler
     
 #### Proposed additional datasets:
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 
-- Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. SPEAKERS_METADATA/Retrieve_metadata.ipynb) The parquet file was converted into a pandas dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
+- Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. `SPEAKERS_METADATA/Retrieve_metadata.ipynb`) The parquet file was converted into a pandas dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
 
 - Newspapers metadata : explain the 
     
@@ -53,11 +58,11 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 [insert the image of drawio diagramm]
 
-Defining a sample to handle datasize (see Notebook *Sample_creation.ipynb*)
+Defining a sample to handle datasize (see Notebook `Sample_creation.ipynb`)
 
-DataWrangling (see Notebook *Data Wrangling Quotebank.ipynb*)
+DataWrangling (see Notebook `Data Wrangling Quotebank.ipynb`)
 
-    * Suppression of quotes according the following criteria
+Suppression of quotes according the following criteria
            
            - have meaningless probabilities ($p \notin [0,1]$)
            - is not clearly identified (threshold to be defined: *threshold_min*)
@@ -66,13 +71,13 @@ DataWrangling (see Notebook *Data Wrangling Quotebank.ipynb*)
 
 Data evaluation with models (see Notebook *methods_language_processing.ipynb*)
 
-Classification (see Notebook ...): [to be described]
+Classification (see Notebook `xxxxx`): [to be described]
 
 Analysis : What analysis we will make in M3?
     
 #### Proposed timeline 
 
-22.10 -> 29.10 : 
+**22.10 -> 29.10** 
 
     - review of the ideas proposed in M1 for each team member. 
     - Data wrangling : - how retrieving the dataset - how to use the metadata from wikidata - how to retrieve informations on papers used --  > link fichier notebook
@@ -80,7 +85,7 @@ Analysis : What analysis we will make in M3?
 
 <hr>
 
-29.10 -> 05.11
+**29.10 -> 05.11**
 
     - Creation of common sample set (about 600 000 quotes) to test uniformly our methods (wrangling, classification, analysis)
     - Retrieval and data wrangling on metadata from Wikidata. + statistics 
@@ -89,7 +94,7 @@ Analysis : What analysis we will make in M3?
 
 <hr>
 
-05.11 -> 12.11 
+**05.11 -> 12.11** 
 
     - Focus on the method to distinguish formal and informal language
     - Apply it to the sample 
@@ -100,7 +105,7 @@ Analysis : What analysis we will make in M3?
 A list of internal milestones up until project Milestone 3.
 Link to Trello : https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2
 
-01.12 -> 17.12
+**01.12 -> 17.12**
 
     - Compute the statistics and vizualisation between dataset and the metadata
     - Create a storytelling in the website
