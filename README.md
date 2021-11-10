@@ -98,7 +98,7 @@ Analysis : What analysis we will make in M3?
 - Creation of common sample set (about 600 000 quotes) to test uniformly our methods (wrangling, classification, analysis)
 - Retrieval and data wrangling on metadata from Wikidata. + statistics 
 - Compute statistics on the metadata to better understand the quotebank dataset. 
-- Data Wrangling on quotations : drop nan, drop quotes with p_attribution < threshold, consistent types, unique identifiers, 
+- Data Wrangling on quotations : drop nan, drop quotes with p_attribution smaller than threshold, consistent types, unique identifiers, 
 
 <hr>
 
@@ -112,7 +112,9 @@ Analysis : What analysis we will make in M3?
     
 #### Organization within the team: 
 A list of internal milestones up until project Milestone 3.
-Link to Trello : https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2
+Platform for collaboration withing the team:
+- [link to Trello](https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2)
+
 
 **01.12 -> 17.12**
 
