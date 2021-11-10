@@ -36,11 +36,11 @@ A list of research questions you would like to address during the project. --> l
 
     - Can the use of informal language provide information about political orientation (via wikidata) ?
 
-    - Does the professional occupation has an influence on the use the colloquial language (via wikidata) ?
+    - Does the professional occupation /political party has an influence on the use the colloquial language (via wikidata) ?
 
     - Do the standard metrics (age, gender, nationality) have any influence on the studied topic (via wikidata) ?
 
-    - Do some newspapers favorize the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the data sources (via WHOIS requests) ?
+    - Do some newspapers favorize the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the data sources (via WHOIS requests) ? --> à reformuler
     
 #### Proposed additional datasets:
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
