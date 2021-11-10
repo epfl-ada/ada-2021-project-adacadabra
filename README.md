@@ -21,9 +21,10 @@ By comparing the use of informal language within newspapers rather than across t
 Find relations between the use of informal langage and some metadata (politic orientation, occupation,  of the speaker).
     
 #### Motivations:
-langue vivante evoluate always, constat que le langage familier (link scienfitc paper) 
-We constated that the informal language is more and more present in the public debate space. [other idea of motivation] For example, the speach of Donal Trump is based on massive utilization of informal words and expressions, as it can be seen, for instance, in nicknames he regulary gives to his opponents (like "Sleppy Joe" or "Crazy Hillary")[https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump]. The informal language (also called colloquial) is  
-Therefore, we will try to confirm this hypothesis and underlines some keys predictors. 
+The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than that used today. In other words, the langage is in constant evolution and the usage of colloquial langage appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaign is based on massive utilization of slang words and expressions, as it can be seen in the nicknames he regularly gave to his opponents (like "Sleppy Joe" or "CrazyHillary")
+[https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump].
+
+Given this intuition, the informal language appears an interesting subject to focus on, and the next step was to study how to easily detect the use of colloquial language. Thanks to research and discussions with a graduate student in English literature, it appears that the usage of informal language is mainly linked to the usage of a specific vocabulary. [reference ?] Therefore, the large number of quotations containing in the Quotebank dataset seems to offer a great opportunity to obtain a general overview on these aspects
         
 #### Story : 
 1. present quotebank : geographical representation, standard stastitics.
@@ -43,6 +44,8 @@ A list of research questions you would like to address during the project. --> l
     
 #### Proposed additional datasets:
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
+
+- Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. SPEAKERS_METADATA/Retrieve_metadata.ipynb) The parquet file was converted into a pandas dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
     
 #### Methods :
 
