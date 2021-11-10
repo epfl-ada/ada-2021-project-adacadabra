@@ -29,12 +29,12 @@ Given this intuition, the informal language appears an interesting subject to fo
 #### Story : 
 | Step | idea | Description  |
 |:---------|:-----------|:-----------|
-1. | Presentation of Quotebank | geographical representation, standard stastitics with fancy representation to present the dataset to the visitor of the page |
-2. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (Zipf law ?) |
-3. | Exploratory analyisis |explore the relation between the metadata and the classification of the quotes |
-4. | Identify the key correlation | Linear regression with coefficient which could have an influence on the output (informal/formal) | 
-5. | Explanatory study | choose a relation and investigate in depth how is it possible (or not) to explain it |
-6. | Conclusion | Highlight the fact that correlation $\noteq$ to causation, limits on your study |
+|1. | Presentation of Quotebank | geographical representation, standard stastitics with fancy representation to present the dataset to the visitor of the page |
+|2. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (Zipf law ?) |
+|3. | Exploratory analyisis |explore the relation between the metadata and the classification of the quotes |
+|4. | Identify the key correlation | Linear regression with coefficient which could have an influence on the output (informal/formal) | 
+|5. | Explanatory study | choose a relation and investigate in depth how is it possible (or not) to explain it |
+|6. | Conclusion | Highlight the fact that correlation ≠ to causation, limits on your study |
     
 #### Research Questions:
 A list of research questions you would like to address during the project. --> link to papers
@@ -63,11 +63,11 @@ Defining a sample to handle datasize (see Notebook `Sample_creation.ipynb`)
 DataWrangling (see Notebook `Data Wrangling Quotebank.ipynb`)
 
 Suppression of quotes according the following criteria
-           
-           - have meaningless probabilities ($p \notin [0,1]$)
-           - is not clearly identified (threshold to be defined: *threshold_min*)
-           - is probably confused with another speaker (threshold to be defined: *threshold_diff*)
-           - is not identified (None values)
+      
+- have meaningless probabilities ($p not in interval [0,1]$)
+- is not clearly identified (threshold to be defined: *threshold_min*)
+- is probably confused with another speaker (threshold to be defined: *threshold_diff*)
+- is not identified (None values)
 
 Data evaluation with models (see Notebook *methods_language_processing.ipynb*)
 
