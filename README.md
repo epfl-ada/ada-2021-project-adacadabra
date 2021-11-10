@@ -21,8 +21,8 @@ By comparing the use of informal language within newspapers rather than across t
 Find relations between the use of informal langage and some metadata (politic orientation, occupation,  of the speaker).
     
 #### Motivations:
-The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than that used today. In other words, the langage is in constant evolution and the usage of colloquial langage appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaign is based on massive utilization of slang words and expressions, as it can be seen in the nicknames he regularly gave to his opponents (like "Sleppy Joe" or "CrazyHillary")
-[https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump].
+The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than that used today. In other words, the langage is in constant evolution and the usage of colloquial langage appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaign is based on massive utilization of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "CrazyHillary")
+.
 
 Given this intuition, the informal language appears an interesting subject to focus on, and the next step was to study how to easily detect the use of colloquial language. Thanks to research and discussions with a graduate student in English literature, it appears that the usage of informal language is mainly linked to the usage of a specific vocabulary. [reference ?] Therefore, the large number of quotations containing in the Quotebank dataset seems to offer a great opportunity to obtain a general overview on these aspects
         
@@ -55,8 +55,8 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 - Newspapers metadata : explain the 
     
 #### Methods :
-
-[insert the image of drawio diagramm]
+<img src="./test_diagram.drawio.svg">
+[insert the image of drawio diagramm] 
 
 Defining a sample to handle datasize (see Notebook `Sample_creation.ipynb`)
 
@@ -69,9 +69,10 @@ Suppression of quotes according the following criteria
 - is probably confused with another speaker (threshold to be defined: *threshold_diff*)
 - is not identified (None values)
 
-Data evaluation with models (see Notebook *methods_language_processing.ipynb*)
+Classification (see Notebook `comparison_SlangDict_quotes.ipynb`): 
+It consist simply to search for a specific word/expression from the dictionnary in each quotes of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word had been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorized as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring in one quote in tousand), which will define a clearer distinction between formal and informal language.
 
-Classification (see Notebook `xxxxx`): [to be described]
+Note that initially other method were also tested without much sucess (Vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb` notebook. 
 
 Analysis : What analysis we will make in M3?
     
@@ -79,9 +80,9 @@ Analysis : What analysis we will make in M3?
 
 **22.10 -> 29.10** 
 
-    - review of the ideas proposed in M1 for each team member. 
-    - Data wrangling : - how retrieving the dataset - how to use the metadata from wikidata - how to retrieve informations on papers used --  > link fichier notebook
-    - Methods : explore the different techniques (PCA, idt) to classify words.
+- review of the ideas proposed in M1 for each team member. 
+- Data wrangling : - how retrieving the dataset - how to use the metadata from wikidata - how to retrieve informations on papers used --  > link fichier notebook
+- Methods : explore the different techniques (PCA, idt) to classify words.
 
 <hr>
 
