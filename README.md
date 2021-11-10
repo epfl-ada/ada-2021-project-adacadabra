@@ -46,8 +46,11 @@ A list of research questions you would like to address during the project. --> l
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 
 - Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. SPEAKERS_METADATA/Retrieve_metadata.ipynb) The parquet file was converted into a pandas dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
+
+- Newspapers metadata : explain the 
     
 #### Methods :
+[insert the image of drawio diagramm]
 
 DataWrangling (see Notebook *Data Wrangling Quotebank.ipynb*)
 
@@ -58,9 +61,11 @@ DataWrangling (see Notebook *Data Wrangling Quotebank.ipynb*)
            - is probably confused with another speaker (threshold to be defined: *threshold_diff*)
            - is not identified (None values)
 
-Data evaluation with the ML (?) model (see Notebook *methods_language_processing.ipynb*)
+Data evaluation with models (see Notebook *methods_language_processing.ipynb*)
 
-    * Classification : à définir semaine pro 
+Classification (see Notebook ...): [to be described]
+
+Analysis : What analysis we will make in M3?
     
 #### Proposed timeline 
 
@@ -90,6 +95,7 @@ Data evaluation with the ML (?) model (see Notebook *methods_language_processing
     
 #### Organization within the team: 
 A list of internal milestones up until project Milestone 3.
+Link to Trello : https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2
 
 01.12 -> 17.12
 
