@@ -62,24 +62,27 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 <hr>
     
 ### Methods :
+**Process flow diagram of the project**
+
 <center><img src="./test_diagram.drawio.svg"><center>
-<center>Process flow diagram of the project</center> 
 
-Defining a sample to handle datasize (see Notebook `Sample_creation.ipynb`)
+The process has passed throug the following steps:
 
-DataWrangling (see Notebook `Data Wrangling Quotebank.ipynb`)
+- Defining a sample to handle datasize (see Notebook `Sample_creation.ipynb`)
 
-Suppression of quotes according the following criteria
+- DataWrangling (see Notebook `Data Wrangling Quotebank.ipynb`)
+
+- Suppression of quotes according the following criteria
       
-- have meaningless probabilities ($p not in interval [0,1]$)
-- is not clearly identified (threshold to be defined: *threshold_min*)
-- is probably confused with another speaker (threshold to be defined: *threshold_diff*)
-- is not identified (None values)
+  - have meaningless probabilities ($p not in interval [0,1]$)
+  - is not clearly identified (threshold to be defined: *threshold_min*)
+  - is probably confused with another speaker (threshold to be defined: *threshold_diff*)
+  - is not identified (None values)
 
-Classification (see Notebook `comparison_SlangDict_quotes.ipynb`): 
-It consist simply to search for a specific word/expression from the dictionnary in each quotes of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word had been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorized as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring in one quote in tousand), which will define a clearer distinction between formal and informal language.
+- Classification (see Notebook `comparison_SlangDict_quotes.ipynb`): 
+  - It consist simply to search for a specific word/expression from the dictionnary in each quotes of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word had been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorized as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring in one quote in tousand), which will define a clearer distinction between formal and informal language.
 
-Note that initially other method were also tested without much sucess (Vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb` notebook. 
+  - Note that initially other method were also tested without much sucess (Vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb` notebook. 
 
 Analysis : What analysis we will make in M3?
     
