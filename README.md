@@ -50,7 +50,10 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 - Newspapers metadata : explain the 
     
 #### Methods :
+
 [insert the image of drawio diagramm]
+
+Defining a sample to handle datasize (notebook ...)
 
 DataWrangling (see Notebook *Data Wrangling Quotebank.ipynb*)
 
