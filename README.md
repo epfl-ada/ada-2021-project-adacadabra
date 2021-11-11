@@ -21,7 +21,7 @@ By comparing the use of informal language within newspapers rather than across t
 Find relations between the use of informal langage and some metadata (politic orientation, occupation,  of the speaker).
     
 ### Motivations:
-The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than the one used today. In other words, the langage is in constant evolution and the usage of colloquial langage appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaign is based on massive utilization of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "Crazy Hillary")
+The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than the one used today. In other words, the langage is in constant evolution and the usage of colloquial langage appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaign is based on massive utilisation of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "Crazy Hillary")
 .
 
 Given this intuition, the informal language seems to be an interesting subject to focus on. Therefore, the main dilemma is to study how to easily detect the use of colloquial language and find appropriate criteria that caracterise it. Thanks to research and discussions with a graduate student in English literature, it appears that the usage of informal language is mainly linked to the usage of a specific vocabulary. [reference ?] Therefore, the large number of quotations containing in the Quotebank dataset seems to offer a great opportunity to obtain a general overview on these aspects
@@ -48,7 +48,7 @@ A list of research questions you would like to address during the project. --> l
 
  - Do the standard metrics (age, gender, nationality) have any influence on the studied topic (via wikidata) ?
 
- - Do some newspapers favorize the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the  data sources (via WHOIS requests) ? --> à reformuler
+ - Do some newspapers favorise the presence of informal langage or try to limit it ? What does it tell us about journalistic quality of the  data sources (via WHOIS requests) ? --> à reformuler
  
 <hr>
     
@@ -68,7 +68,7 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 The process has passed throug the following steps:
 
-- Defining a sample to handle datasize (see Notebook `Sample_creation.ipynb`)
+- Defining a sample to handle data size (see Notebook `Sample_creation.ipynb`)
 
 - DataWrangling (see Notebook `Data Wrangling Quotebank.ipynb`)
 
@@ -80,40 +80,13 @@ The process has passed throug the following steps:
   - is not identified (None values)
 
 - Classification (see Notebook `comparison_SlangDict_quotes.ipynb`): 
-  - It consist simply to search for a specific word/expression from the dictionnary in each quotes of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word had been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorized as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring in one quote in tousand), which will define a clearer distinction between formal and informal language.
+  - It consists simply to search for a specific word or expression from the dictionnary in each quote of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word has been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorised as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring once in a thousand quotes), which will define a clearer distinction between formal and informal language.
 
-  - Note that initially other method were also tested without much sucess (Vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb` notebook. 
+  - Note that initially, other method were also tested without much sucess (as vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb`. 
 
-Analysis : What analysis we will make in M3?
+Analysis : What analysis we will make in Milestone 3?
     
-#### Proposed timeline 
-
-**22.10 -> 29.10** 
-
-- review of the ideas proposed in M1 for each team member. 
-- Data wrangling : - how retrieving the dataset - how to use the metadata from wikidata - how to retrieve informations on papers used --  > link fichier notebook
-- Methods : explore the different techniques (PCA, idt) to classify words.
-
-<hr>
-
-**29.10 -> 05.11**
-
-- Creation of common sample set (about 600 000 quotes) to test uniformly our methods (wrangling, classification, analysis)
-- Retrieval and data wrangling on metadata from Wikidata. + statistics 
-- Compute statistics on the metadata to better understand the quotebank dataset. 
-- Data Wrangling on quotations : drop nan, drop quotes with p_attribution smaller than threshold, consistent types, unique identifiers, 
-
-<hr>
-
-**05.11 -> 12.11** 
-
-- Focus on the method to distinguish formal and informal language
-- Apply it to the sample 
-- Clean readme and notebooks of code
-
-<hr>
-    
-#### Organization within the team: 
+#### Organisation within the team: 
 A list of internal milestones up until project Milestone 3.
 Platform for collaboration withing the team:
 - [link to Trello](https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2)
