@@ -44,9 +44,9 @@ Given this intuition, the informal language seems to be an interesting subject t
 <hr>
     
 ### Proposed additional datasets:
-- Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. `SPEAKERS_METADATA/Retrieve_metadata.ipynb`) The parquet file was converted into a dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
+- Speakers metadata (see the notebook `SPEAKERS_METADATA/Retrieve_metadata.ipynb`): Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted. The parquet file was converted into a dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
 
-- Newspapers metadata : The web domains of all entries URLs have been extracted and grouped into a domain dataframe. Using the package [python-whois](https://pypi.org/project/python-whois/), registered informations for fields "organization, country, state, city" have been retrieved and added to the domain dataframe. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`). The whole process is shown in the notebook `NEWSPAPER_METADATA/whois_requests.ipynb` which also includes figures about data representativity.
+- Newspapers metadata (see the notebook `NEWSPAPER_METADATA/whois_requests.ipynb`) : The web domains of all entries URLs have been extracted and grouped into a domain dataframe. Using the package [python-whois](https://pypi.org/project/python-whois/), registered informations for fields "organization, country, state, city" have been retrieved and added to the domain dataframe. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`).  
 <hr>
     
 ### Methods:
