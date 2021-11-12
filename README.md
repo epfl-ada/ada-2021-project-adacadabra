@@ -7,7 +7,6 @@ Exploratory analysis of the use of informal language in English speaking newspap
 ### Abstract:
 This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use of colloquial language in the citations. To perform this analysis, the quotes are compared to a reference colloquial language dictionary and categorized as formal or colloquial. The classified quotes are analysed using several aspects of the quotes metadata. The used metadata are divided into two categories. The first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domains of quotes url. These investigations intend to show whether disparities occur in the use of informal language within specific groups. The third  analysis axis consists in a temporal approach addressing the evolution of the use of colloquial language.
 
-
 <hr> 
 
 ### Project idea: 
