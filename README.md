@@ -5,7 +5,8 @@
 Exploratory analysis of the use of informal language in English speaking newspapers
     
 ### Abstract:
-A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
+This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use of colloquial language in the citations. To perform this analysis, the quotes are compared to a reference colloquial language dictionary and categorized as formal or colloquial. The classified quotes are analysed using several aspects of the quotes metadata. The used metadata are divided into two categories. The first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domain of the quotes origins. These investigations intend to show whether disparities occur in the use of informal language within specific groups. The third axis of analysis consists in a temporal approach addressing the evolution of the use of colloquial language.
+
 
 <hr> 
 
@@ -53,8 +54,7 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 - Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. `SPEAKERS_METADATA/Retrieve_metadata.ipynb`) The parquet file was converted into a pandas dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
 
-- Newspapers metadata : explain the 
-
+- Newspapers metadata : The web domains of all entries URLs have been extracted and grouped into a domain dataframe. Using the package [python-whois](https://pypi.org/project/python-whois/), registered informations for the fields "organization, country, state, city" have been retrieved and added to the domain dataframe. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`). The whole process is shown in the notebook `NEWSPAPER_METADATA/whois_requests.ipynb` which also includes figures about data representativity.
 <hr>
     
 ### Methods:
