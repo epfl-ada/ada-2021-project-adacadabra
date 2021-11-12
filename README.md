@@ -72,21 +72,21 @@ The process has passed throug the following steps:
 
   - Note that initially, other method were also tested without much sucess (as vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb`. 
     
-#### Proposed timeline and organisation within the time:
+#### Proposed timeline and organisation within the team:
 
 The list of internal milestones up until project Milestone 3 are detailed on the Trello plateform ([link](https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2)).
-Platform for collaboration withing the team:
+Platform for collaboration within the team
 
-**01.12-5.12**
+**01.12 - 5.12**
 
 - Finish exploratory anlysis with the cleaned dictionnary to begin the focus on explanatory analysis *(Jules, Nicola)*
 - Compute statistics, visualisation and interpretation *(Marin, Alexandre)*
     
-**06.12-12.12**
+**06.12 - 12.12**
 - Fancy graphs, think about the web page design *(Nicola, Alexandre)* 
 - follow tutorial on web-page compilation *(Jules, Marin)*
 
-**13.12-17.12**
+**13.12 - 17.12**
 - focus on the web-page, story telling *(Alexandre, Nicola)*
 - clean the notebook *(Jules)*
     
