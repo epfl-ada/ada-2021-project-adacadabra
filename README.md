@@ -1,9 +1,5 @@
 # ada-2021-project-adacadabra
 
-Lien tableau Trello : https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2
-
-
-
 ### Title :
     
 Exploratory analysis of the use of informal language in English speaking newspapers
@@ -13,11 +9,11 @@ A 150 word description of the project idea and goals. What’s the motivation be
 
 <hr> 
 
-### Project idea : 
+### Project idea: 
 The dataset could be used to identify an evolution of the use of informal language through time in the media. If put into prospective with the context of use, it could help detect long term changes or phenomena. We will try to understand how the importance of formal language evolves when making public statements. 
 By comparing the use of informal language within newspapers rather than across time, it could be possible to evaluate a component of the journalistic quality of different sources or caracteristics of the speaker directly.
 
-### Goals :
+### Goals:
 Find relations between the use of informal langage and some metadata (politic orientation, occupation,  of the speaker).
     
 ### Motivations:
@@ -28,7 +24,7 @@ Given this intuition, the informal language seems to be an interesting subject t
 
 <hr>
         
-### Story : 
+### Story: 
 
 | Step | idea | Description  |
 |:---------|:-----------|:-----------|
@@ -61,7 +57,7 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 <hr>
     
-### Methods :
+### Methods:
 **Process flow diagram of the project**
 
 <center><img src="./test_diagram.drawio.svg"><center>
@@ -83,12 +79,10 @@ The process has passed throug the following steps:
   - It consists simply to search for a specific word or expression from the dictionnary in each quote of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word has been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorised as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring once in a thousand quotes), which will define a clearer distinction between formal and informal language.
 
   - Note that initially, other method were also tested without much sucess (as vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb`. 
-
-Analysis : What analysis we will make in Milestone 3?
     
-#### Proposed timeline 
+#### Proposed timeline:
 
-**22.10 -> 29.10** 
+**22.10-29.10** 
 
 - Review of the ideas proposed in M1 by each team member. 
 - Data wrangling questions : how retrieving the dataset? / how to use the metadata from wikidata? / how to retrieve informations on papers used? 
@@ -96,7 +90,7 @@ Analysis : What analysis we will make in Milestone 3?
 
 <hr>
 
-**29.10 -> 05.11**
+**29.10-05.11**
 
 - Creation of common sample set (about 200 000 quotes per year) to test uniformly our methods (wrangling, classification, analysis)
 - Retrieval and data wrangling on metadata from Wikidata. 
@@ -105,7 +99,7 @@ Analysis : What analysis we will make in Milestone 3?
 
 <hr>
 
-**05.11 -> 12.11** 
+**05.11-12.11** 
 
 - Focus on the method to distinguish formal and informal language.
 - Apply it to the sample .
@@ -119,7 +113,7 @@ Platform for collaboration withing the team:
 - [link to Trello](https://trello.com/invite/b/sVkiju6l/95ca74a3fa2c4efd30a7d1e7ce646f25/milestone-2)
 
 
-**01.12 -> 17.12**
+**01.12-17.12**
 
 - Compute the statistics and vizualisation between dataset and the metadata
 - Create a storytelling in the website
