@@ -5,13 +5,13 @@
 Exploratory analysis of the use of informal language in English speaking newspapers
     
 ### Abstract:
-This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use of colloquial language in the citations. To perform this analysis, the quotes are compared to a reference colloquial language dictionary and categorized as formal or colloquial. The classified quotes are analysed using several aspects of the quotes metadata. The used metadata are divided into two categories. The first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domain of the quotes origins. These investigations intend to show whether disparities occur in the use of informal language within specific groups. The third axis of analysis consists in a temporal approach addressing the evolution of the use of colloquial language.
+This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use of colloquial language in the citations. To perform this analysis, the quotes are compared to a reference colloquial language dictionary and categorized as formal or colloquial. The classified quotes are analysed using several aspects of the quotes metadata. The used metadata are divided into two categories. The first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domains of quotes url. These investigations intend to show whether disparities occur in the use of informal language within specific groups. The third  analysis axis consists in a temporal approach addressing the evolution of the use of colloquial language.
 
 
 <hr> 
 
 ### Project idea: 
-The dataset could be used to identify the relation of the use of informal language and data about the speakers, quotes sources and time. This project could give information about the journalistic quality, the languistic style, as well as its evolution in time.
+The dataset could be used to identify the relation of the use of informal language and data about the speakers, quotes sources and time. This project could give information about the journalistic quality, the languistic style, as well as its time evolution.
 
 ### Goals:
 Find relations between the use of informal langage and some metadata (politic orientation, occupation of the speaker).
@@ -28,7 +28,7 @@ Given this intuition, the informal language seems to be an interesting subject t
 | Step | idea | Description  |
 |:---------|:-----------|:-----------|
 |1. | Presentation of Quotebank | geographical representation, standard stastitics with fancy representation to present the dataset |
-|2. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (i.e Zipf law) |
+|2. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (i.e. Zipf law) |
 |3. | Exploratory analysis |explore the relation between the metadata and the classification of the quotes |
 |4. | Identify the key correlations | linear/logistic regression with coefficient which could have an influence on the output (informal/formal), statistical tests, ... | 
 |5. | Explanatory study | choose a relation and investigate in depth how is it possible (or not) to explain it |
@@ -45,9 +45,9 @@ Given this intuition, the informal language seems to be an interesting subject t
 <hr>
     
 ### Proposed additional datasets:
-- Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. `SPEAKERS_METADATA/Retrieve_metadata.ipynb`) The parquet file was converted into a pandas dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
+- Speakers metadata : Using the provided parquet file, the informations (gender, age, occupation, nationality, religion ...) of each speakers were extracted (cf. `SPEAKERS_METADATA/Retrieve_metadata.ipynb`) The parquet file was converted into a dataframe and the QIDs into meaningful informations thanks to the lookup table provided.
 
-- Newspapers metadata : The web domains of all entries URLs have been extracted and grouped into a domain dataframe. Using the package [python-whois](https://pypi.org/project/python-whois/), registered informations for the fields "organization, country, state, city" have been retrieved and added to the domain dataframe. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`). The whole process is shown in the notebook `NEWSPAPER_METADATA/whois_requests.ipynb` which also includes figures about data representativity.
+- Newspapers metadata : The web domains of all entries URLs have been extracted and grouped into a domain dataframe. Using the package [python-whois](https://pypi.org/project/python-whois/), registered informations for fields "organization, country, state, city" have been retrieved and added to the domain dataframe. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`). The whole process is shown in the notebook `NEWSPAPER_METADATA/whois_requests.ipynb` which also includes figures about data representativity.
 <hr>
     
 ### Methods:
@@ -84,10 +84,10 @@ Platform for collaboration withing the team:
 - Compute statistics, visualisation and interpretation *(Marin, Alexandre)*
     
 **06.12-12.12**
-- Fancy graphs, think about the design of the web page *(Nicola, Alexandre)* 
+- Fancy graphs, think about the web page design *(Nicola, Alexandre)* 
 - follow tutorial on web-page compilation *(Jules, Marin)*
 
 **13.12-17.12**
-- focus on the web-page, story telling *(Alexandre, Marin, Nicola)*
+- focus on the web-page, story telling *(Alexandre, Nicola)*
 - clean the notebook *(Jules)*
     
