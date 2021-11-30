@@ -5,7 +5,7 @@
 Exploratory analysis of the use of informal language in English speaking newspapers
     
 ### Abstract:
-This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use of colloquial language in the citations. To perform this analysis, the quotes are compared to a reference colloquial language dictionary and categorized as formal or colloquial. The classified quotes are analysed using several aspects of the quotes metadata. The used metadata are divided into two categories. The first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domains of quotes url. These investigations intend to show whether disparities occur in the use of informal language within specific groups. The third  analysis axis consists in a temporal approach addressing the evolution of the use of colloquial language.
+This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use of colloquial language in the citations of US politician. To perform this analysis, the quotes are compared to the [wikipedia list of English contractions]( https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) and categorized as formal or colloquial. Afterwards the evaluated quotes are analysed enriched with additional metadata about the authors of these quotes. The used metadata are divided into two categories. The first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domains of quotes url. These investigations intend to show whether disparities occur in the use of informal language within specific groups. The third  analysis axis consists in a temporal approach addressing the evolution of the use of colloquial language.
 
 <hr> 
 
@@ -27,19 +27,16 @@ Given this intuition, the informal language seems to be an interesting subject t
 | Step | idea | Description  |
 |:---------|:-----------|:-----------|
 |1. | Presentation of Quotebank | geographical representation, standard stastitics with fancy representation to present the dataset |
-|2. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (i.e. Zipf law) |
-|3. | Exploratory analysis |explore the relation between the metadata and the classification of the quotes |
-|4. | Identify the key correlations | linear/logistic regression with coefficient which could have an influence on the output (informal/formal), statistical tests, ... | 
-|5. | Explanatory study | choose a relation and investigate in depth how is it possible (or not) to explain it |
-|6. | Conclusion | highlight the fact that correlation ≠ to causation, limits on our study |
+|2. | Research question | Presentation of the RQ's, general descriptive plots about the politician in the US. |
+|3. | Presentation of the method used to classify the quotes | description of the method and index used, results on the most used words, statistics on the frequency of each entry (i.e. Zipf law) |
+|4. | Exploratory analysis |explore the relation between the metadata and the classification of the quotes |
+|5. | Identify the key correlations | linear/logistic regression with coefficient which could have an influence on the output (informal/formal), statistical tests, ... | 
+|6. | Explanatory study | choose a relation and investigate in depth how is it possible (or not) to explain it |
+|7. | Conclusion | highlight the fact that correlation ≠ to causation, limits on our study |
     
 #### Research Questions:
 
- - Does particular attributes (i.e occupation, political party, age) has an influence on the use the colloquial language ?
 
- - Is there disparities in the use of language between newspapers of different region of the world.
- 
- - Is there a noticeable evolution in the use of colloquial language between 2015 and 2020.
  
 <hr>
     
