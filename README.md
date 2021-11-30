@@ -54,6 +54,8 @@ Given this intuition, the informal language seems to be an interesting subject t
 
 <center><img src="./test_diagram.drawio.svg"><center>
 
+All the methods used to highlight the results in the DataStory are described and grouped in the notebook `DataAnalysis_Story`. The steps of data wrangling, data acquisition and dictionary compilation are maintained in the notebooks already present for Milestone 2.
+    
 The process has passed throug the following steps:
 
 - Create a sample to handle data size (see Notebook `Sample_creation.ipynb`)
@@ -68,7 +70,7 @@ The process has passed throug the following steps:
       - is not identified (None values)
 
 - Classification (see Notebook `CLASSIFICATION/Segmentation_model/comparison_SlangDict_quotes.ipynb`): 
-  - It consists simply to search for a specific word or expression from the dictionnary in each quote of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word has been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorised as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring once in a thousand quotes), which will define a clearer distinction between formal and informal language.
+  - The classification of the quotes are based on the [list of English contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) of wikipedia. These 180 word formulations, according to the authors of the page, are to be avoided anywhere other than in direct quotations in encyclopedic prose. It consists simply to search for a specific word or expression from the dictionnary in each quote of the dataset. If a match is found, the dictionnary is updated to contain the number of time the word has been found in the quotes. This value is then used to reduce the dictionnary size. Without this reduction all quotes are categorised as colloquial which is not surprising given the size of the dictionary used (>20'000 entries). This is why we will focus on the less frequently occurring terms (occuring once in a thousand quotes), which will define a clearer distinction between formal and informal language.
 
   - Note that initially, other method were also tested without much sucess (as vector space retrieval, word embeddings, ...). They are all presented in the following notebook: `CLASSIFICATION/Segmentation_model/methods_language_processing.ipynb`. 
     
