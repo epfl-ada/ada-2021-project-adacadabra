@@ -16,6 +16,7 @@ The dataset could be used to identify the relation of the use of informal langua
 Find relations between the use of informal language and some metadata (politic orientation, occupation of the speaker).
     
 ### Motivations:
+-article
 The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than the one used today. In other words, the language is in constant evolution and the usage of colloquial language appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaign is based on massive utilization of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "Crazy Hillary"). on a observé jusqu'à maintenant, nous on veut computer.
 
 Given this intuition, the informal language seems to be an interesting subject to focus on. Therefore, the main dilemma is to study how to easily detect the use of colloquial language and find appropriate criteria that characterize it. Thanks to research and discussions with a graduate student in English literature, it appears that the usage of informal language is mainly linked to the usage of a specific vocabulary. Therefore, the large number of quotations containing in the Quotebank dataset seems to offer a great opportunity to obtain a general overview on these aspects.
@@ -35,7 +36,8 @@ Given this intuition, the informal language seems to be an interesting subject t
 |7. | Conclusion | highlight the fact that correlation ≠ to causation, limits on our study |
     
 #### Research Questions:
-
+- what are the main features to detect informal language
+- can we detect correlations between general features the use of informal language among U.S politician
 
  
 <hr>
@@ -69,6 +71,7 @@ The process has passed through the following steps:
 - Classification (see Notebook `\CLASSIFICATION\English_contractions\contractions_dictionary.ipynb` and `quotations_classification.ipynb`): 
   - The classification of the quotes are based on the [list of English contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) of Wikipedia. These 180 word formulations, according to the authors of the page, are to be avoided anywhere other than in direct quotations in encyclopedic prose. It consists simply to search for a specific word or expression from the dictionary in each quote of the dataset. If a match is found, the dictionary is updated to contain the number of time the contraction has been found in the quotes (38%). This value is then used to reduce the dictionary size with the removal of word that appear in more than a certain fraction of words defined by a threshold (0.02). This is why we will focus on the less frequently occurring terms (occurring less than in 2% of the quotes), which will define a clearer distinction between formal and informal language. This operation reduces the total number of colloquial quotes to about 10%.
 
+Décrire les 3 étapes: Slang, wiki, phrasal verbs + autres
 Inspired from [Learning to Classify Documents According to Formal and Informal Style](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.364.4671&rep=rep1&type=pdf) (F.Sheikha, D.Inkpen 2012)
 
  
@@ -101,7 +104,7 @@ The list of internal milestones during the entire project duration are detailed 
 |Milestone 3 | Linear regression setup | BUA |
 |Milestone 3 | Apply the dictionary to the sample | all |
 |Milestone 3 | Aggregation by political speakers | DAJ |
-|Milestone 3 | Map stats States Viz | SAN |
+|Milestone 3 | Phrasal verbs detection | SAN |
 |Milestone 3 | Set up of the webpage with Jekyll | PIM |
 |Milestone 3 | Sketch of the story, selection of the viz | all |
 |Milestone 3 | Clean the notebook and merge in one | all |
