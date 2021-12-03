@@ -68,6 +68,9 @@ The process has passed through the following steps:
 
 - Classification (see Notebook `\CLASSIFICATION\English_contractions\contractions_dictionary.ipynb` and `quotations_classification.ipynb`): 
   - The classification of the quotes are based on the [list of English contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) of Wikipedia. These 180 word formulations, according to the authors of the page, are to be avoided anywhere other than in direct quotations in encyclopedic prose. It consists simply to search for a specific word or expression from the dictionary in each quote of the dataset. If a match is found, the dictionary is updated to contain the number of time the contraction has been found in the quotes (38%). This value is then used to reduce the dictionary size with the removal of word that appear in more than a certain fraction of words defined by a threshold (0.02). This is why we will focus on the less frequently occurring terms (occurring less than in 2% of the quotes), which will define a clearer distinction between formal and informal language. This operation reduces the total number of colloquial quotes to about 10%.
+
+Inspired from [Learning to Classify Documents According to Formal and Informal Style](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.364.4671&rep=rep1&type=pdf) (F.Sheikha, D.Inkpen 2012)
+
  
     
 #### Work distribution withing the team:
