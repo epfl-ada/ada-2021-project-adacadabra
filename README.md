@@ -25,7 +25,7 @@ The idea for this project was born out of a general observation by a member of t
 
 Additionally, studies on the subject of formal/informal formulation detection were not well studied. Given this intuition, informal language seems to be an interesting subject to focus on but it comes with the main dilemma: how to easily detect the use of colloquial language and find appropriate criteria that characterize it? A researche study on learning how to classify documents according to formal and informal style (F.Sheikha, D.Inkpen 2012)(https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.364.4671&rep=rep1&type=pdf) can be taken as a guideline to guide us in achieving the distinction of these two styles. 
 
-The final goal is to exploit the large number of quotations contained in the Quotebank dataset seems to profit from the great opportunity of having a general overview on these aspects.
+The final goal is to exploit the large number of quotations contained in the Quotebank dataset. It is about taking advantage of the great opportunity of having a general overview on the studied aspects and theire repartition among the types of speakers.
 <hr>
         
 ### Story: 
@@ -45,16 +45,17 @@ The final goal is to exploit the large number of quotations contained in the Quo
 
     
 #### Research Questions:
-- what are the main features to detect informal language
-- can we detect correlations between general features the use of informal language among U.S politician
+- *what are the main features to detect informal language*
+- *is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs)*
+- *can we detect correlations between general features the use of informal language among U.S politician*
 <hr>
     
 ### Proposed additional datasets:
-- **Speakers metadata** (see the notebook `SPEAKERS_METADATA/Retrieve_metadata.ipynb`): Using the provided parquet file, the information (gender, age, occupation, nationality, religion ...) of each speaker were extracted. The parquet file was converted into a data frame and the QIDs into meaningful information thanks to the lookup table provided.
+- **Speakers metadata** (see the notebook `SPEAKERS_METADATA/Retrieve_metadata.ipynb`): Using the provided parquet file, the information (gender, age, occupation, nationality, religion ...) of each speaker were extracted from the [wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) free and open knowledge base. The parquet file was converted into a data frame and the QIDs into meaningful information thanks to the lookup table provided.
 
 - **Newspapers metadata** (see the notebook `NEWSPAPER_METADATA/whois_requests.ipynb`): The web domains of all entries URLs have been extracted and grouped into a domain data frame. Using the package [python-whois](https://pypi.org/project/python-whois/), registered information for fields "organization, country, state, city" have been retrieved and added to the domain data frame. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`).  
 
-- **Wiki contraction to be avoided**: This dataset is an illustrative, non exhaustive list of contractions that should not be used in Wikipedia articles. The contributors should avoid using them anywhere other than indirect quotations in encyclopedic prose. The methods of treatment of contractions prescribed by Wikipedia can be found in the notebook `CLASSIFICATION/English_contractions.ipynb`. The latter describes the methodology that leads to the data sample used for further analysis.
+- **Wiki contraction to be avoided**: This dataset is an illustrative, non exhaustive [list of contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) that should not be used in Wikipedia articles. The contributors should avoid using them anywhere other than indirect quotations in encyclopedic prose. The methods of treatment of contractions prescribed by Wikipedia can be found in the notebook `CLASSIFICATION/English_contractions.ipynb`. The latter describes the methodology that leads to the data sample used for further analysis.
 
 - **Urban dictionary**: It is a crowdsourced online dictionary for slang words and phrases. Urban Dictionary was intended as a dictionary of slang, or cultural words or phrases, not typically found in standard dictionaries. By July 2020, the dictionary had over 12 million definitions [A. Peckham 2020](https://urbandictionary.blog/post/2020-07-07-rethinking-the-dictionary/). The treatment of these data is described in the notebook `CLASSIFICATION/comparison_SlangDict_quotes.ipynb`.
 <hr>
