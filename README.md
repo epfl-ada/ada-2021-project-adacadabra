@@ -52,9 +52,9 @@ The final goal is to exploit the large number of quotations contained in the Quo
 
 - **Newspapers metadata** (see the notebook `NEWSPAPER_METADATA/whois_requests.ipynb`): The web domains of all entries URLs have been extracted and grouped into a domain data frame. Using the package [python-whois](https://pypi.org/project/python-whois/), registered information for fields "organization, country, state, city" have been retrieved and added to the domain data frame. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`).  
 
-- **Wiki contraction o be avoided**: Illustrative, not an exhaustive list of contractions used in Wikipedia: these are to be avoided anywhere other than indirect quotations in encyclopedic prose. The treatment of these contractions prescribed by Wikipedia can be found in notebook xxx. The methods of treatment of contractions prescribed by Wikipedia can be found in the notebook `CLASSIFICATION/English_contractions.ipynb`. The latter describes the methodology that leads to the data sample used for further analysis.
+- **Wiki contraction to be avoided**: Illustrative, not an exhaustive list of contractions used in Wikipedia: these are to be avoided anywhere other than indirect quotations in encyclopedic prose. The treatment of these contractions prescribed by Wikipedia can be found in notebook xxx. The methods of treatment of contractions prescribed by Wikipedia can be found in the notebook `CLASSIFICATION/English_contractions.ipynb`. The latter describes the methodology that leads to the data sample used for further analysis.
 
-- **Urban dictionary**: Urban Dictionary is a crowdsourced online dictionary for slang words and phrases. Urban Dictionary was intended as a dictionary of slang, or cultural words or phrases, not typically found in standard dictionaries. By July 2020, the dictionary had over 12 million definitions [A. Peckham 2020](https://urbandictionary.blog/post/2020-07-07-rethinking-the-dictionary/)
+- **Urban dictionary**: It is a crowdsourced online dictionary for slang words and phrases. Urban Dictionary was intended as a dictionary of slang, or cultural words or phrases, not typically found in standard dictionaries. By July 2020, the dictionary had over 12 million definitions [A. Peckham 2020](https://urbandictionary.blog/post/2020-07-07-rethinking-the-dictionary/). The treatment of these data is described in the notebook `CLASSIFICATION/comparison_SlangDict_quotes.ipynb`.
 <hr>
     
 ### Methods:
@@ -66,9 +66,9 @@ All the methods used to highlight the results in the Data Story are described an
     
 The process has passed through the following steps:
 
-- Create a sample to handle data size (see Notebook `Sample_creation.ipynb`)
+- Create a sample to handle data size (see Notebook `Sample_creation.ipynb`):
 
-- Data Wrangling (see Notebook `DATA_WRANGLING/Data Wrangling Quotebank.ipynb`)
+- Data Wrangling (see Notebook `DATA_WRANGLING/Data Wrangling Quotebank.ipynb`):
 
     - Suppression of quotes according to the following criteria
       
@@ -77,13 +77,13 @@ The process has passed through the following steps:
       - is probably confused with another speaker (threshold to be defined: *threshold_diff*)
       - is not identified (None values)
 
-- Classification (see Notebook `\CLASSIFICATION\English_contractions\contractions_dictionary.ipynb` and `quotations_classification.ipynb`): 
+- Classification (see Notebooks in `\CLASSIFICATION\...`): 
+- Different classification methods (these are listed below) have been tried on the dataset. To start with rather naive and crude methods and then with more linguistically justified techniques:
+  - The classification of the quotes is based on the 
+    In this notebook, we treat each quote of the corpus and assign them a score, or a binary variable determining if the quote is formal or informal according the dictionnary of informal formulation and slang vocabulary (15'000 entries) comparison_SlangDict_quotes.ipynb The threshold was set at 0.001. This means that the expression must not appear in more than one quote out of a thousand to remain in the dictionary.
   - The classification of the quotes is based on the [list of English contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) of Wikipedia. These 180-word formulations, according to the authors of the page, are to be avoided anywhere other than indirect quotations in encyclopedic prose. It consists of a simple search for a specific word or expression from the dictionary in each quote of the dataset. If a match is found, the dictionary is updated to contain the number of times the contraction has been found in the quotes (38%). This value is then used to reduce the dictionary size with the removal of the word that appears in more than a certain fraction of words defined by a threshold (0.02). This is why we will focus on the less frequently occurring terms (occurring less than in 2% of the quotes), which will define a clearer distinction between formal and informal language. This operation reduces the total number of colloquial quotes to about 10%.
 
-Décrire les 3 étapes: Slang, wiki, phrasal verbs + autres
-
-
-    the quotes are compared to the [Wikipedia list of English contractions]( https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions)
+  - The classification of the quotes is based on phrasal verbs : `\CLASSIFICATION\xxx.ipynb
  
     
 #### Work distribution within the team:
