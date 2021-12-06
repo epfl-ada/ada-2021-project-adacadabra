@@ -43,7 +43,8 @@ The final goal is to exploit the large number of quotations contained in the Quo
 |9. | Explanatory study | choose a relation and investigate in-depth how is it possible (or not) to explain it |
 |10. | Conclusion | try to answer the initial question, qualify the initial hypotheses |
 
-    
+<hr>
+
 #### Research Questions:
 - *what are the main features to detect informal language*
 - *is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs)*
