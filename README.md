@@ -38,17 +38,17 @@ The final goal is to exploit the large number of quotations contained in the Quo
 |4. | Presentation of the *naive method* used to classify the quotes | description of the Urban Dictionary (link), result obtained with this approach, limits, and problems.|
 |5. | Presentation of *the contraction method* used to classify the quotes | description of the wiki page (link), result obtained with this approach, limits, and problems, justify its give up|
 |6. | Presentation of the *phrasal verb method* used to enhance the  *the contraction method* | description of the Urban Dictionary (link), result obtained with this approach, limits, and problems.|
-|7. | Exploratory analysis about the politician in the US | profit of the classified data and start to explore the relationship between the metadata and the classification of the quotes |
+|7. | Exploratory analysis about the politician in the US | From the classified data, start to explore the relationship between the metadata and the classification of the quotes |
 |8. | Identify the key relations | linear/logistic regression to spot the features which could influence the output (informal/formal), statistical tests, ... | 
-|9. | Explanatory study | choose a relation and investigate in-depth how is it possible (or not) to explain it |
+|9. | Explanatory study | choose a relation and investigate in-depth how is it possible (or not) to explain it &supprimer cette ligne?)|
 |10. | Conclusion | try to answer the initial question, qualify the initial hypotheses |
 
 <hr>
 
 #### Research Questions:
-- *what are the main features to detect informal language ?* 
-- *is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs)*
-- *can we detect correlations between general features the use of informal language among U.S politician*
+- *What are the main features to detect informal language ?* 
+- *Is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs)*
+- *Can we detect correlations between general features the use of informal language among U.S politician*
 <hr>
     
 ### Proposed additional datasets:
