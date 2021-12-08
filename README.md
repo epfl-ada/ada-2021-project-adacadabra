@@ -5,25 +5,25 @@
 Exploratory analysis of the use of informal language in English speaking newspapers
     
 ### Abstract:
-This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use. To perform this analysis different classification methods have been tested. Detection of [slang language](https://en.wikipedia.org/wiki/Slang), [english contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) retrieval and [phrasal verbs](https://en.wikipedia.org/wiki/English_phrasal_verbs) occurrence are the main characteristics analyzed to better understand the notion on informality in written language. After a satisfying classification of the given quotes, the latter are enriched with additional metadata about the authors of these reported speeches. The used metadata is divided into two categories: the first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domains of quotes URL. These investigations intend to show whether disparities occur in the use of informal language within specific groups. 
-Focus U.S politician
+This project aims to perform data analysis on the [Quotebank](https://zenodo.org/record/4277311#.YY5tUy3pN-U) dataset which contains articles quotes from English speaking newspapers. The subject explored through this dataset is the use. To perform this analysis, different classification methods have been tested. Detection of [slang language](https://en.wikipedia.org/wiki/Slang), [english contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) retrieval and colloquial langage detection with an ML model are the main characteristics analyzed to better understand the notion on informality in written language. After a satisfying classification of the given quotes, the latter are enriched with additional metadata about the authors of these reported speeches. The used metadata is divided into two categories: the first one is speakers related and is retrieved using [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). The second one is newspapers related and is retrieved by doing [WHOIS](https://en.wikipedia.org/wiki/WHOIS) requests on the web domains of quotes URL. These investigations intend to show whether disparities occur in the use of informal language within specific groups. 
+The choice is to focus on politican american speakers. Therefore, the use of informal langage could be analyzed in this specific category.
 
 <hr> 
 
 ### Project idea: 
-The dataset could be used to identify the relation of the use of informal language and data about the speakers, quotes sources, and time. The initial research topic was to perform exploratory and explanatory analyses on the classified dataset. Our naive approach to the classification of informal/formal quotes has led us to face certain difficulties. After some additional investigation on the classification methods, the process of detection appeared interesting enough and surprisingly uninvestigated to further dig down in the subject. The exploratory analysis that follows the treatment of the quotations is limited, but it nevertheless makes it possible to highlight some key points in the understanding of the mechanisms at work in the use of language in the media.
+The dataset could be used to identify the relation of the use of informal language and data about the speakers and quotes sources. The initial research topic was to perform exploratory analyses on the classified dataset. Our naive approach to the classification of informal/formal quotes has led us to face certain difficulties. After some additional investigation on the classification methods, the process of detection appeared interesting enough and surprisingly uninvestigated to further dig down in the subject. The exploratory analysis that follows the treatment of the quotations is limited, but it nevertheless makes it possible to highlight some key points in the understanding of the mechanisms at work in the use of language in the media.
 
 ### Goals:
 The project is divided into two main objectives:
 
-- Find the main characteristics of formal style
+- Find the main characteristics of formal style.
 - Find an appropriate method to classify the given quotes among formal and informal formulations.
-- Find relations between the use of informal language and some metadata (politic orientation, occupation of the speaker, age, ...).
+- Find relations between the use of informal language and some metadata (genre, political party, age ...).
     
 ### Motivations:
 The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than the one used today (**à changer suivant notre amorce**). In other words, the language is in constant evolution and the usage of colloquial language appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaigns is based on massive utilization of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "Crazy Hillary"). 
 
-Additionally, studies on the subject of formal/informal formulation detection were not well studied. Given this intuition, informal language seems to be an interesting subject to focus on but it comes with the main dilemma: how to easily detect the use of colloquial language and find appropriate criteria that characterize it? A researche study on learning how to classify documents according to formal and informal style ([F.Sheikha, D.Inkpen 2012](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.364.4671&rep=rep1&type=pdf)) can be taken as a guideline to guide us in achieving the distinction of these two styles. 
+Additionally, studies on the subject of formal/informal formulation detection were not well studied. Given this intuition, informal language seems to be an interesting subject to focus on but it comes with the main dilemma: how to easily detect the use of colloquial language and find appropriate criteria that characterize it? A research study on learning how to classify documents according to formal and informal style ([F.Sheikha, D.Inkpen 2012](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.364.4671&rep=rep1&type=pdf)) can be taken as a guideline to guide us in achieving the distinction of these two styles. 
 
 The final goal is to exploit the large number of quotations contained in the Quotebank dataset. It is about taking advantage of the great opportunity of having a general overview on the studied aspects and theire repartition among the types of speakers.
 <hr>
@@ -46,7 +46,7 @@ The final goal is to exploit the large number of quotations contained in the Quo
 <hr>
 
 #### Research Questions:
-- *what are the main features to detect informal language*
+- *what are the main features to detect informal language ?* 
 - *is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs)*
 - *can we detect correlations between general features the use of informal language among U.S politician*
 <hr>
