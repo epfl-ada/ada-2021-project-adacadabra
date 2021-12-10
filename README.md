@@ -1,4 +1,7 @@
 # ada-2021-project-adacadabra
+#TODO
+- adapter nom de dossier jupyter
+- refaire phrasal verbs
 
 ### Title:
     
