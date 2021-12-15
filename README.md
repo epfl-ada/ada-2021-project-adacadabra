@@ -1,7 +1,6 @@
 # ada-2021-project-adacadabra
 #TODO
-- adapter nom de dossier jupyter
-- refaire phrasal verbs
+- écrire le paragraphe sur naive bayes
 
 ### Title:
     
@@ -89,7 +88,7 @@ The process has passed through the following steps:
     In this notebook, we treat each quote of the corpus and assign them a score (binary variable determining if the quote is formal (0) or informal (1)) according the dictionnary of informal formulation and slang vocabulary (15'000 entries). If a match is found, the dictionary is updated to contain the number of times the slang word has been found in the quotes. Finally, a threshold is set to remove the most common slang word to avoid false positives. The process is detailed in `\CLASSIFICATION\comparison_SlangDict_quotes.ipynb`. 
   - The classification of the quotes is based on the [list of English contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) of Wikipedia. These 180-word formulations, according to the authors of the page, are to be avoided anywhere other than indirect quotations in encyclopedic prose. It consists of a simple search for a specific word or expression from the dictionary in each quote of the dataset. Similarly to the detection of slang words,  if a match is found, the dictionary is updated to contain the number of times the contraction has been found in the quotes (38%). This value is then used to reduce the dictionary size with the removal of the word that appears in more than a certain fraction of words defined by a threshold (0.02). This is why we will focus on the less frequently occurring terms (occurring less than in 2% of the quotes), which will define a clearer distinction between formal and informal language. This operation reduces the total number of colloquial quotes to about 10%.
 
-  - The classification of the quotes is based on [phrasal verbs](https://www.phrasalverbdemon.com/): This feature could characterize informal texts,
+  - NAIVE BAYES (à faire NICO) ... The classification of the quotes is based on [phrasal verbs](https://www.phrasalverbdemon.com/): This feature could characterize informal texts,
 as reported by Dempsey, McCarthy, and McNamara (2007). **A voir comment Nico fait** `\CLASSIFICATION\xxx.ipynb
  
     
