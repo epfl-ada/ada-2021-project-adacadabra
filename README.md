@@ -67,7 +67,7 @@ The final goal is to exploit the large number of quotations contained in the Quo
 ### Methods:
 **Process flow diagram of the project (à refaire)**
 
-<center><img src="./data_pipeline.svg"><center>
+<center><img src="test_diagram.drawio.pdf"><center>
 
 All the methods used to highlight the results in the Data Story are described and grouped in the notebook `DataAnalysis_Story`. The steps of data wrangling, data acquisition, and dictionary compilation are maintained in the notebooks already present for Milestone 2.
     
