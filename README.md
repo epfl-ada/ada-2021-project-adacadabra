@@ -112,16 +112,18 @@ The list of internal milestones during the entire project duration is detailed o
 |Milestone 2 | Word retrieval method investigations | BUA | 
 |Milestone 2 | WHOIS requests | SAN |    
 |Milestone 2 | Metadata on speakers | DAJ |
-|Milestone 2 | README | all |
+|Milestone 2 | Creation of the README | all |
 |Milestone 2 | Apply dictionary on quotes | PIM, BUA, SAN |
 |Milestone 2 | Exploratory analysis on metadata | SAN, DAJ |
 |Milestone 3 | Update README according to TA comments| BUA |  
 |Milestone 3 | Definition of the sample and extraction | PIM |
 |Milestone 3 | Reporting issue on non-English quotes | SAN |
-|Milestone 3 | Linear regression setup | BUA |
+|Milestone 3 | Linear/Logistic regression setup | BUA |
 |Milestone 3 | Apply the dictionary to the sample | all |
 |Milestone 3 | Aggregation by political speakers | DAJ |
-|Milestone 3 | Phrasal verbs detection | SAN |
+|Milestone 3 | Naive Bayes method for classification | SAN |
 |Milestone 3 | Set up of the webpage with Jekyll | PIM |
 |Milestone 3 | Sketch of the story, selection of the viz | all |
-|Milestone 3 | Clean the notebook and merge in one | all |
+|Milestone 3 | Redaction of the story | BUA |
+|Milestone 3 | Final review of the content (README + Story | all |    
+|Milestone 3 | Clean the notebook and set a clear structure | all |
