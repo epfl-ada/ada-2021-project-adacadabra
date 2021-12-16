@@ -94,9 +94,9 @@ The process has passed through the following steps:
 as reported by Dempsey, McCarthy, and McNamara (2007). **A voir comment Nico fait** `\3_CLASSIFICATION\xxx.ipynb
  
 - Analysis (see Notebooks in `4_ANALYSIS/...`):   
-    - Statistics on speakers aggregation
+    - Statistics on speakers aggregation (see the notebook 'regressions.ipynb')
 
-    - Linear and logistic regression 
+    - Linear and logistic regression (see the notebook 'statistics_on_speakers_aggregation.ipynb')
     
 #### Work distribution within the team:
 
