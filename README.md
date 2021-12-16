@@ -18,16 +18,16 @@ The dataset could be used to identify the relation of the use of informal langua
 ### Goals:
 The project is divided into two main objectives:
 
-- Find the main characteristics of formal style.
+- Find the main characteristics of informal style.
 - Find an appropriate method to classify the given quotes among formal and informal formulations.
-- Find relations between the use of informal language and some metadata (genre, political party, age ...).
+- Find relations between the use of informal language and some metadata on American politicians (genre, political party, age ...).
     
 ### Motivations:
-The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than the one used today (**à changer suivant notre amorce**). In other words, the language is in constant evolution and the usage of colloquial language appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaigns is based on massive utilization of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "Crazy Hillary"). 
+The idea for this project was born out of a general observation by a member of the group: the interview or newspaper archives give the impression that the language used was more formal than the one used today. In other words, the language is in constant evolution and the usage of colloquial language appears more and more frequently in the public debate. For example, the speech of Donald Trump during the two latest US electoral campaigns is based on massive utilization of slang words and expressions, as it can be seen in the [nicknames he regularly gave to his opponents](https://en.wikipedia.org/wiki/List_of_nicknames_used_by_Donald_Trump) (like "Sleppy Joe" or "Crazy Hillary"). 
 
 Additionally, studies on the subject of formal/informal formulation detection were not well studied. Given this intuition, informal language seems to be an interesting subject to focus on but it comes with the main dilemma: how to easily detect the use of colloquial language and find appropriate criteria that characterize it? A research study on learning how to classify documents according to formal and informal style ([F.Sheikha, D.Inkpen 2012](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.364.4671&rep=rep1&type=pdf)) can be taken as a guideline to guide us in achieving the distinction of these two styles. 
 
-The final goal is to exploit the large number of quotations contained in the Quotebank dataset. It is about taking advantage of the great opportunity of having a general overview on the studied aspects and theire repartition among the types of speakers.
+The final goal is to exploit the large number of quotations contained in the Quotebank dataset. It is about taking advantage of the great opportunity of having a general overview of the studied aspects and their repartition among the types of speakers.
 <hr>
         
 ### Story: 
@@ -49,18 +49,18 @@ The final goal is to exploit the large number of quotations contained in the Quo
 
 #### Research Questions:
 - *What are the main features to detect informal language ?* 
-- *Is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs)*
-- *Can we detect correlations between general features the use of informal language among U.S politician*
+- *Is it possible to infer language style (formal/informal) from relatively simple rules (slang words, presence of contrasts, presence of phrasal verbs) ?*
+- *Can we detect correlations between general features the use of informal language among U.S politician ?*
 <hr>
     
 ### Proposed additional datasets:
-- **Speakers metadata** (see the notebook `SPEAKERS_METADATA/Retrieve_metadata.ipynb`): Using the provided parquet file, the information (gender, age, occupation, nationality, religion ...) of each speaker were extracted from the [wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) free and open knowledge base. The parquet file was converted into a data frame and the QIDs into meaningful information thanks to the lookup table provided.
+- **Speakers metadata** (see the notebook `2_ADDITIONNAL_DATASETS/SPEAKERS_METADATA/retrieve_metadata.ipynb`): Using the provided parquet file, the information (gender, age, occupation, nationality, religion ...) of each speaker were extracted from the [wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), free and open knowledge base. The parquet file was converted into a data frame and the QIDs into meaningful information thanks to the lookup table provided.
 
-- **Newspapers metadata** (see the notebook `NEWSPAPER_METADATA/whois_requests.ipynb`): The web domains of all entries URLs have been extracted and grouped into a domain data frame. Using the package [python-whois](https://pypi.org/project/python-whois/), registered information for fields "organization, country, state, city" have been retrieved and added to the domain data frame. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`).  
+- **Newspapers metadata** (see the notebook `2_ADDITIONNAL_DATASETS/NEWSPAPER_METADATA/whois_requests.ipynb`): The web domains of all entries URLs have been extracted and grouped into a domain data frame. Using the package [python-whois](https://pypi.org/project/python-whois/), registered information for fields "organization, country, state, city" have been retrieved and added to the domain data frame. It has been saved in a pickle file (cf. `NEWSPAPER_METADATA/whois_results.pkl`).  
 
-- **Wiki contraction to be avoided**: This dataset is an illustrative, non exhaustive [list of contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) that should not be used in Wikipedia articles. The contributors should avoid using them anywhere other than indirect quotations in encyclopedic prose. The methods of treatment of contractions prescribed by Wikipedia can be found in the notebook `CLASSIFICATION/English_contractions.ipynb`. The latter describes the methodology that leads to the data sample used for further analysis.
+- **Wiki contraction to be avoided**: This dataset is an illustrative, non exhaustive [list of contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) that should not be used in Wikipedia articles. The contributors should avoid using them anywhere other than indirect quotations in encyclopedic prose. The methods of treatment of contractions prescribed by Wikipedia can be found in the notebook `3_CLASSIFICATION/contractions_method.ipynb`. The latter describes the methodology that leads to the data sample used for further analysis.
 
-- **Urban dictionary**: It is a crowdsourced online dictionary for slang words and phrases. Urban Dictionary was intended as a dictionary of slang, or cultural words or phrases, not typically found in standard dictionaries. By July 2020, the dictionary had over 12 million definitions [A. Peckham 2020](https://urbandictionary.blog/post/2020-07-07-rethinking-the-dictionary/). The treatment of these data is described in the notebook `CLASSIFICATION/comparison_SlangDict_quotes.ipynb`.
+- **Urban dictionary**: It is a crowdsourced online dictionary for slang words and phrases. Urban Dictionary was intended as a dictionary of slang, or cultural words or phrases, not typically found in standard dictionaries. By July 2020, the dictionary had over 12 million definitions [A. Peckham 2020](https://urbandictionary.blog/post/2020-07-07-rethinking-the-dictionary/). The treatment of these data is described in the notebook `3_CLASSIFICATION/comparison_SlangDict_quotes.ipynb`.
 <hr>
     
 ### Methods:
@@ -72,10 +72,12 @@ All the methods used to highlight the results in the Data Story are described an
     
 The process has passed through the following steps:
 
-- Create a sample to handle data size (see Notebook `Sample_creation.ipynb`):
 
-- Data Wrangling (see Notebook `DATA_WRANGLING/Data Wrangling Quotebank.ipynb`):
 
+- Data Wrangling (see Notebook `dataExtraction+Wrangling.ipynb`):
+
+    - Create a sample to handle data size.
+    
     - Suppression of quotes according to the following criteria
       
       - have meaningless probabilities (p not in interval [0,1])
@@ -83,14 +85,18 @@ The process has passed through the following steps:
       - is probably confused with another speaker (threshold to be defined: *threshold_diff*)
       - is not identified (None values)
 
-- Classification (see Notebooks in `\CLASSIFICATION\...`): different classification methods (these are listed below) have been tried on the dataset. To start with rather naive and crude methods and then with more linguistically justified techniques:
+- Classification (see Notebooks in `\3_CLASSIFICATION\...`): different classification methods (these are listed below) have been tried on the dataset. To start with rather naive and crude methods and then with more linguistically justified techniques:
   - The classification of the quotes is based on the [Urban dictionnary](https://www.urbandictionary.com/).
     In this notebook, we treat each quote of the corpus and assign them a score (binary variable determining if the quote is formal (0) or informal (1)) according the dictionnary of informal formulation and slang vocabulary (15'000 entries). If a match is found, the dictionary is updated to contain the number of times the slang word has been found in the quotes. Finally, a threshold is set to remove the most common slang word to avoid false positives. The process is detailed in `\CLASSIFICATION\comparison_SlangDict_quotes.ipynb`. 
   - The classification of the quotes is based on the [list of English contractions](https://en.wikipedia.org/wiki/Wikipedia:List_of_English_contractions) of Wikipedia. These 180-word formulations, according to the authors of the page, are to be avoided anywhere other than indirect quotations in encyclopedic prose. It consists of a simple search for a specific word or expression from the dictionary in each quote of the dataset. Similarly to the detection of slang words,  if a match is found, the dictionary is updated to contain the number of times the contraction has been found in the quotes (38%). This value is then used to reduce the dictionary size with the removal of the word that appears in more than a certain fraction of words defined by a threshold (0.02). This is why we will focus on the less frequently occurring terms (occurring less than in 2% of the quotes), which will define a clearer distinction between formal and informal language. This operation reduces the total number of colloquial quotes to about 10%.
 
   - NAIVE BAYES (à faire NICO) ... The classification of the quotes is based on [phrasal verbs](https://www.phrasalverbdemon.com/): This feature could characterize informal texts,
-as reported by Dempsey, McCarthy, and McNamara (2007). **A voir comment Nico fait** `\CLASSIFICATION\xxx.ipynb
+as reported by Dempsey, McCarthy, and McNamara (2007). **A voir comment Nico fait** `\3_CLASSIFICATION\xxx.ipynb
  
+- Analysis (see Notebooks in `4_ANALYSIS/...`):   
+    - Statistics on speakers aggregation
+
+    - Linear and logistic regression 
     
 #### Work distribution within the team:
 
