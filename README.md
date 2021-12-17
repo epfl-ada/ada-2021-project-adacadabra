@@ -1,6 +1,6 @@
 # ada-2021-project-adacadabra
-#TODO
-- écrire le paragraphe sur naive bayes
+
+The story of this project can be found [**here**](https://mazarindh.github.io/ADAcadabra/)
 
 ### Title:
     
